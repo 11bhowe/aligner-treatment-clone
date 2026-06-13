@@ -1,0 +1,84 @@
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [36],
+  {
+    2481: function (e, t, n) {
+      (Promise.resolve().then(n.bind(n, 9958)),
+        Promise.resolve().then(n.bind(n, 1051)),
+        Promise.resolve().then(n.bind(n, 7657)));
+    },
+    9958: function (e, t, n) {
+      "use strict";
+      n.d(t, {
+        default: function () {
+          return s;
+        },
+      });
+      var a = n(3619),
+        i = n(1196),
+        o = n(9111),
+        r = n(1483),
+        c = n(1257),
+        u = n(6018),
+        l = n(1051);
+      function s(e) {
+        let { region: t, patientName: n, shareUuid: s, shareType: f } = e,
+          { t: d } = (0, l.Q)();
+        return (
+          (0, i.useEffect)(
+            () => (
+              (0, r.j)({ catalog: "viewer", event: "page-loaded", value: s }),
+              () =>
+                void (0, r.j)({
+                  catalog: "viewer",
+                  event: "page-unload",
+                  value: s,
+                })
+            ),
+            [s],
+          ),
+          (0, i.useEffect)(() => {
+            let e = 2 === f;
+            document.title = d(e ? "makeit-viewer-title" : "viewer-title", {
+              name: n,
+            });
+          }, [n, f, d]),
+          (function (e, t) {
+            let n = (0, i.useRef)(0);
+            (0, i.useEffect)(() => {
+              let a = (n.current = window.setInterval(async () => {
+                try {
+                  let n = await fetch(
+                    (0, c.v)(
+                      u.IT,
+                      "/api/check_status?region=".concat(e, "&id=").concat(t),
+                    ),
+                    {
+                      method: "GET",
+                      headers: {
+                        "Content-Type":
+                          "application/x-www-form-urlencoded; charset=UTF-8",
+                      },
+                    },
+                  );
+                  if (200 !== n.status) throw n;
+                } catch (e) {
+                  location.reload();
+                }
+              }, 6e5));
+              return () => {
+                window.clearInterval(a);
+              };
+            }, [t, e]);
+          })(t, s),
+          (0, a.jsx)(o.Z, { ...e })
+        );
+      }
+    },
+  },
+  function (e) {
+    (e.O(0, [377, 35, 316, 147, 665, 971, 23, 744], function () {
+      return e((e.s = 2481));
+    }),
+      (_N_E = e.O()));
+  },
+]);
