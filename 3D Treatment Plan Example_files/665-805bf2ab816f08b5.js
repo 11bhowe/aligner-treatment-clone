@@ -1247,12 +1247,12 @@
             children: [
               s === C && l === s
                 ? (0, n.jsx)("img", {
-                    src: "/static/images/step-dragger-anystep-overlap.svg",
+                    src: "/aligner-treatment-clone/static/images/step-dragger-anystep-overlap.svg",
                     alt: "",
                     className: "w-26px h-32px",
                   })
                 : (0, n.jsx)("img", {
-                    src: "/static/images/step-dragger.svg",
+                    src: "/aligner-treatment-clone/static/images/step-dragger.svg",
                     alt: "",
                     className: "w-26px h-32px",
                   }),
