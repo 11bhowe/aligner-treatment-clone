@@ -1128,7 +1128,7 @@
                               : (0, n.jsxs)(n.Fragment, {
                                   children: [
                                     (0, n.jsx)("img", {
-                                      src: "/static/images/step-dragger-anystep.svg",
+                                      src: "/aligner-treatment-clone/static/images/step-dragger-anystep.svg",
                                       alt: "",
                                       className: "w-26px h-32px",
                                     }),
