@@ -7282,7 +7282,8 @@
                     t[n] = arguments[n];
                   console.log("^^^^^ ", t);
                   if (t[1] === "webgl2/simulator.js") {
-                    return "http://127.0.0.1:5500/sim/webgl2/simulator.js";
+                    // return "http://127.0.0.1:5500/sim/webgl2/simulator.js";
+                    return "../sim/webgl2/simulator.js";
                   }
                   // if (t[1] === "webgl2/simulator.wasm") {
                   //   return "http://127.0.0.1:5500/sim/webgl2/simulator.wasm";

@@ -1,0 +1,4 @@
+window.__RUNTIME__ = {
+  tmx: "https://iweb.angelalign.com/tmx/r/iortho/global/prod",
+  languages: undefined,
+};
