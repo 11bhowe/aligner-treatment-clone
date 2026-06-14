@@ -5559,17 +5559,9 @@
             });
         },
         oS = async (e, t) => {
-          console.log("YOLO.  ", e);
-          console.log(t);
           let n = e.resolveAssetURL("webgl".concat(t, "/simulator.js")),
             l = e.resolveAssetURL("webgl".concat(t, "/simulator.wasm")),
             o = e.resolveAssetURL("webgl".concat(t, "/simulator.data"));
-          //   let n = e.resolveAssetURL("/simulator.js"),
-          //     l = e.resolveAssetURL("/simulator.wasm"),
-          //     o = e.resolveAssetURL("/simulator.data");
-          //   console.log("N ", n);
-          //   console.log("L ", l);
-          //   console.log("O ", o);
           try {
             let [e, t, i] = await Promise.all([
               (0, K.r)(n),
@@ -7280,7 +7272,6 @@
                     n++
                   )
                     t[n] = arguments[n];
-                  console.log("^^^^^ ", t);
                   if (t[1] === "webgl2/simulator.js") {
                     // return "http://127.0.0.1:5500/sim/webgl2/simulator.js";
                     return "../aligner-treatment-clone/sim/webgl2/simulator.js";

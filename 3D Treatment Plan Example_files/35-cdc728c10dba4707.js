@@ -43,63 +43,27 @@
       }
     },
     6486: function (e, n, t) {
-      console.log("%%%%%%", e, n, t);
-      console.log(e.exports.Z, { credentials: "same-origin", ...n });
       n.Z = (e, n) =>
         fetch(
           e.includes("community")
             ? "3D Treatment Plan Example_files/en.json"
-            : // : e.includes("simulator.wasm")
-              //   ? "sim/simulator.wasm"
-              e,
+            : e,
           {
             credentials: "same-origin",
             ...n,
           },
-        ).then(async (e) => {
+        ).then((e) => {
           // if (!e.ok) throw e;
-          let ee = null;
-          console.log("EEE: ", e);
-          // const json = await e.
-          // console.log("EEE: ", await e.json());
-          console.log("EEE text ", t.text);
-          console.log("EEE n", n);
 
           // if (e.url.includes("simulator.wasm")) {
           //   const buff = await e.arrayBuffer();
-          //   console.log("GOGOGO ", buff);
           //   const compiledModule = await WebAssembly.compileStreaming(e);
           //   const moduleImports = WebAssembly.Module.imports(compiledModule);
-          //   console.log("imports...", moduleImports);
           //   const { instance } = await WebAssembly.instantiate(buff);
-          //   console.log("GOGOGO ", buff, instance, result);
           //   const result = instance.exports.myWasmFunction(42);
-          //   console.log("GOGOGO ", buff, instance, result);
           // }
-          if (
-            e.url ===
-            "https://iweb.angelalign.com/jslib/simulator/0.0.0-3bf37bb30c/assets/webgl2/simulator.js"
-          ) {
-            // ee = {
-            //   body: e.body,
-            //   bodyUsed: false,
-            //   headers: e.headers,
-            //   ok: true,
-            //   redirected: false,
-            //   status: 200,
-            //   statusText: "",
-            //   text: () => "",
-            //   type: "cors",
-            //   url: "http://127.0.0.1:5500/sim/simulator.js",
-            // };
-            ee = e.clone();
-            // ee.url = "http://127.0.0.1:5500/sim/simulator.js";
-            console.log("2ND EEE ", ee);
-            // return ee;
-          }
           return e;
         });
-      console.log("NZZZZZZZ", n.Z);
     },
     5367: function (e, n, t) {
       function r(e) {
@@ -138,7 +102,6 @@
         "ko-KR",
       ];
       function i(e) {
-        console.log("@@@ ", e);
         if (e === "https://iweb.angelalign.com/tmx/r/iortho/global/prod") {
           const fs = require("fs");
           const rawData = fs.readFileSync("./prod", "utf8");
@@ -154,28 +117,14 @@
           const rawData = fs.readFileSync("./en-wasm.json", "utf8");
           return JSON.parse(rawData);
         }
-        if (
-          e === "undefined/3d-community/en.json" ||
-          // e ===
-          //   "https://iweb.angelalign.com/tmx/v/0135ec228d04cec4ce164678f55238d553032186/3d-wasm/en.json"
-          e.includes("3d-community/en.json")
-        ) {
+        if (e.includes("3d-community/en.json")) {
           const fs = require("fs");
           const rawData = fs.readFileSync("./en.json", "utf8");
           return JSON.parse(rawData);
         }
-        if (
-          e === "undefined/3d-scheme/en.json" ||
-          e ===
-            "https://iweb.angelalign.com/tmx/v/0135ec228d04cec4ce164678f55238d553032186/3d-scheme/en.json" ||
-          e.includes("3d-scheme/en.json")
-        ) {
-          // console.log("!!!!!");
+        if (e.includes("3d-scheme/en.json")) {
           const fs = require("fs");
-          // console.log("!!!!!!!!!");
           const rawData = fs.readFileSync("./en-scheme3.json", "utf8");
-          // console.log("!!!!!!!!!!!!!");
-          // console.log(await JSON.parse(rawData));
           const thedata = JSON.parse(rawData);
           console.log(thedata);
           return thedata;
